@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -17,17 +18,21 @@
 }
 
 body {
+  font-family: 'League Spartan', sans-serif;
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: #637097;
 }
 
+@layer base {
+  h1 {
+    @apply text-4xl font-bold;
+  }
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+  .common-btn {
+    @apply rounded-md flex justify-center items-center cursor-pointer bg-[#eae3dc] text-[#222730] leading-none text-2xl hover:brightness-150 shadow-customInnerBottom shadow-[#222730];
   }
 }
